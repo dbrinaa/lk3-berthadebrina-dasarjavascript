@@ -1,0 +1,321 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    background: #fff8fc;
+    color: #5b4650;
+    line-height: 1.7;
+}
+
+body::before {
+    content: "✦";
+    position: fixed;
+    top: 120px;
+    left: 7%;
+    font-size: 25px;
+    color: #f3a9c7;
+    animation: float 3s ease-in-out infinite;
+    z-index: -1;
+}
+
+body::after {
+    content: "♡";
+    position: fixed;
+    bottom: 80px;
+    right: 7%;
+    font-size: 35px;
+    color: #f5b6d0;
+    animation: float 4s ease-in-out infinite;
+    z-index: -1;
+}
+
+nav {
+    background: rgba(255, 190, 216, 0.92);
+    padding: 15px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    box-shadow: 0 4px 15px rgba(214, 95, 145, 0.15);
+}
+
+nav h2 {
+    color: white;
+    font-size: 23px;
+}
+
+nav h2::before {
+    content: "🎀 ";
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #a94f76;
+}
+
+.hero {
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding: 60px 20px;
+
+    background:
+        radial-gradient(circle at 15% 20%, #ffffff 0 2%, transparent 3%),
+        radial-gradient(circle at 85% 30%, #ffffff 0 2%, transparent 3%),
+        linear-gradient(135deg, #ffddea, #fff3d6, #e3f7ff);
+
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "♡  ✦  ♡  ✧  ♡";
+    position: absolute;
+    top: 45px;
+    left: 0;
+    width: 100%;
+    color: rgba(214, 95, 145, 0.35);
+    font-size: 22px;
+    letter-spacing: 25px;
+}
+
+.hero::after {
+    content: "✧";
+    position: absolute;
+    right: 12%;
+    bottom: 15%;
+    font-size: 45px;
+    color: rgba(255, 255, 255, 0.8);
+    animation: spin 5s linear infinite;
+}
+
+.hero img {
+    width: 190px;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 50%;
+
+    border: 7px solid white;
+
+    box-shadow:
+        0 0 0 8px #f8bfd6,
+        0 12px 30px rgba(173, 92, 125, 0.2);
+
+    margin-bottom: 25px;
+
+    animation: float 3s ease-in-out infinite;
+}
+
+.hero h1 {
+    color: #d65f91;
+    font-size: 48px;
+    margin-bottom: 5px;
+}
+
+.hero h1::after {
+    content: " ♡";
+    font-size: 30px;
+}
+
+.hero h2 {
+    color: #806574;
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    max-width: 600px;
+    margin: auto;
+    color: #715b65;
+}
+
+.tombol {
+    display: inline-block;
+
+    margin-top: 25px;
+    padding: 13px 28px;
+
+    background: #ed8fba;
+    color: white;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    border-radius: 30px;
+
+    box-shadow: 0 7px 15px rgba(214, 95, 145, 0.25);
+
+    transition: 0.3s;
+}
+
+.tombol::after {
+    content: " ✨";
+}
+
+.tombol:hover {
+    transform: translateY(-5px) scale(1.03);
+    background: #d96b9d;
+    box-shadow: 0 10px 20px rgba(214, 95, 145, 0.3);
+}
+
+section {
+    padding: 80px 30px;
+    text-align: center;
+}
+
+section h2 {
+    color: #d65f91;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+section h2::before {
+    content: "♡ ";
+}
+
+section h2::after {
+    content: " ♡";
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 280px;
+    padding: 30px 25px;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    border: 2px solid #ffd4e5;
+    border-radius: 25px;
+
+    box-shadow: 0 10px 25px rgba(194, 108, 145, 0.12);
+
+    transition: 0.35s;
+}
+
+.card:hover {
+    transform: translateY(-10px) rotate(1deg);
+    box-shadow: 0 15px 30px rgba(194, 108, 145, 0.2);
+}
+
+.card h3 {
+    color: #d65f91;
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.card h3::before {
+    content: "♡ ";
+}
+
+#kontak {
+    background: linear-gradient(135deg, #fff0f6, #fff9e8);
+}
+
+#kontak p {
+    margin: 10px 0;
+}
+
+#kontak p::before {
+    content: "✿ ";
+    color: #e58aad;
+}
+
+footer {
+    background: #f4aeca;
+    color: white;
+    text-align: center;
+    padding: 22px;
+}
+
+footer::before {
+    content: "♡ ✦ ♡ ";
+}
+
+footer::after {
+    content: " ♡ ✦ ♡";
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 600px) {
+
+    nav {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul {
+        gap: 15px;
+        font-size: 14px;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .hero h2 {
+        font-size: 19px;
+    }
+
+    .hero img {
+        width: 150px;
+        height: 150px;
+    }
+
+    section {
+        padding: 55px 20px;
+    }
+}
